@@ -11,6 +11,25 @@
 		D805F1DA2B74BABD00C80D18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1D92B74BABD00C80D18 /* ContentView.swift */; };
 		D805F1DC2B74BABE00C80D18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D805F1DB2B74BABE00C80D18 /* Assets.xcassets */; };
 		D805F1DF2B74BABE00C80D18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D805F1DE2B74BABE00C80D18 /* Preview Assets.xcassets */; };
+		D805F1E62B74BAFE00C80D18 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1E52B74BAFE00C80D18 /* Journal.swift */; };
+		D805F1EB2B74C29E00C80D18 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1EA2B74C29E00C80D18 /* HomeView.swift */; };
+		D805F1ED2B74C42000C80D18 /* MoodButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */; };
+		D805F1EF2B74C82600C80D18 /* JournalHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */; };
+		D805F1F12B74C8BC00C80D18 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F02B74C8BC00C80D18 /* ProfileView.swift */; };
+		D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F22B74CD1D00C80D18 /* Quote.swift */; };
+		D805F1FB2B7512F100C80D18 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1FA2B7512F100C80D18 /* Network.swift */; };
+		D88044602B7B4F7A004E8BE8 /* CreateJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */; };
+		D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */; };
+		D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */; };
+		D88044682B7F596B004E8BE8 /* DatePickerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */; };
+		D8E9726B2B7682C300F38745 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = D8E9726A2B7682C300F38745 /* BitCollections */; };
+		D8E9726D2B7682C300F38745 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = D8E9726C2B7682C300F38745 /* Collections */; };
+		D8E9726F2B7682C300F38745 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = D8E9726E2B7682C300F38745 /* DequeModule */; };
+		D8E972712B7682C300F38745 /* HashTreeCollections in Frameworks */ = {isa = PBXBuildFile; productRef = D8E972702B7682C300F38745 /* HashTreeCollections */; };
+		D8E972732B7682C300F38745 /* HeapModule in Frameworks */ = {isa = PBXBuildFile; productRef = D8E972722B7682C300F38745 /* HeapModule */; };
+		D8E972762B76900200F38745 /* MoodHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E972752B76900200F38745 /* MoodHistoryView.swift */; };
+		D8E972782B76A84B00F38745 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E972772B76A84B00F38745 /* MoodEntry.swift */; };
+		D8E9727B2B78CA1500F38745 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9727A2B78CA1500F38745 /* PreviewSampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +38,20 @@
 		D805F1D92B74BABD00C80D18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D805F1DB2B74BABE00C80D18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D805F1DE2B74BABE00C80D18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D805F1E52B74BAFE00C80D18 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		D805F1EA2B74C29E00C80D18 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodButtonView.swift; sourceTree = "<group>"; };
+		D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryView.swift; sourceTree = "<group>"; };
+		D805F1F02B74C8BC00C80D18 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D805F1F22B74CD1D00C80D18 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		D805F1FA2B7512F100C80D18 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalView.swift; sourceTree = "<group>"; };
+		D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
+		D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryToolbarView.swift; sourceTree = "<group>"; };
+		D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSheetView.swift; sourceTree = "<group>"; };
+		D8E972752B76900200F38745 /* MoodHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHistoryView.swift; sourceTree = "<group>"; };
+		D8E972772B76A84B00F38745 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		D8E9727A2B78CA1500F38745 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +59,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E9726D2B7682C300F38745 /* Collections in Frameworks */,
+				D8E972732B7682C300F38745 /* HeapModule in Frameworks */,
+				D8E9726B2B7682C300F38745 /* BitCollections in Frameworks */,
+				D8E972712B7682C300F38745 /* HashTreeCollections in Frameworks */,
+				D8E9726F2B7682C300F38745 /* DequeModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +91,8 @@
 			children = (
 				D805F1D72B74BABD00C80D18 /* DailyJournalApp.swift */,
 				D805F1D92B74BABD00C80D18 /* ContentView.swift */,
+				D805F1E92B74C24400C80D18 /* Views */,
+				D805F1E72B74BB0500C80D18 /* Model */,
 				D805F1DB2B74BABE00C80D18 /* Assets.xcassets */,
 				D805F1DD2B74BABE00C80D18 /* Preview Content */,
 			);
@@ -67,6 +107,42 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D805F1E72B74BB0500C80D18 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D805F1E52B74BAFE00C80D18 /* Journal.swift */,
+				D8E972772B76A84B00F38745 /* MoodEntry.swift */,
+				D805F1F22B74CD1D00C80D18 /* Quote.swift */,
+				D805F1FA2B7512F100C80D18 /* Network.swift */,
+				D8E972792B78C9F400F38745 /* Preview */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D805F1E92B74C24400C80D18 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D805F1EA2B74C29E00C80D18 /* HomeView.swift */,
+				D8E972752B76900200F38745 /* MoodHistoryView.swift */,
+				D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */,
+				D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */,
+				D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */,
+				D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */,
+				D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */,
+				D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */,
+				D805F1F02B74C8BC00C80D18 /* ProfileView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8E972792B78C9F400F38745 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				D8E9727A2B78CA1500F38745 /* PreviewSampleData.swift */,
+			);
+			path = Preview;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,12 +153,20 @@
 				D805F1D02B74BABD00C80D18 /* Sources */,
 				D805F1D12B74BABD00C80D18 /* Frameworks */,
 				D805F1D22B74BABD00C80D18 /* Resources */,
+				D8E972742B76869600F38745 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DailyJournal;
+			packageProductDependencies = (
+				D8E9726A2B7682C300F38745 /* BitCollections */,
+				D8E9726C2B7682C300F38745 /* Collections */,
+				D8E9726E2B7682C300F38745 /* DequeModule */,
+				D8E972702B7682C300F38745 /* HashTreeCollections */,
+				D8E972722B7682C300F38745 /* HeapModule */,
+			);
 			productName = DailyJournal;
 			productReference = D805F1D42B74BABD00C80D18 /* DailyJournal.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +195,9 @@
 				Base,
 			);
 			mainGroup = D805F1CB2B74BABD00C80D18;
+			packageReferences = (
+				D8E972692B7682C300F38745 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = D805F1D52B74BABD00C80D18 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,13 +219,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D8E972742B76869600F38745 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D805F1D02B74BABD00C80D18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8E972762B76900200F38745 /* MoodHistoryView.swift in Sources */,
 				D805F1DA2B74BABD00C80D18 /* ContentView.swift in Sources */,
+				D805F1E62B74BAFE00C80D18 /* Journal.swift in Sources */,
+				D8E972782B76A84B00F38745 /* MoodEntry.swift in Sources */,
+				D88044682B7F596B004E8BE8 /* DatePickerSheetView.swift in Sources */,
+				D805F1EB2B74C29E00C80D18 /* HomeView.swift in Sources */,
+				D805F1EF2B74C82600C80D18 /* JournalHistoryView.swift in Sources */,
+				D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */,
+				D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */,
+				D805F1FB2B7512F100C80D18 /* Network.swift in Sources */,
+				D8E9727B2B78CA1500F38745 /* PreviewSampleData.swift in Sources */,
+				D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */,
 				D805F1D82B74BABD00C80D18 /* DailyJournalApp.swift in Sources */,
+				D805F1F12B74C8BC00C80D18 /* ProfileView.swift in Sources */,
+				D805F1ED2B74C42000C80D18 /* MoodButtonView.swift in Sources */,
+				D88044602B7B4F7A004E8BE8 /* CreateJournalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +396,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DailyJournal/Preview Content\"";
 				DEVELOPMENT_TEAM = 442TUD5P76;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -303,6 +426,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DailyJournal/Preview Content\"";
 				DEVELOPMENT_TEAM = 442TUD5P76;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -344,6 +468,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8E972692B7682C300F38745 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8E9726A2B7682C300F38745 /* BitCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E972692B7682C300F38745 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = BitCollections;
+		};
+		D8E9726C2B7682C300F38745 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E972692B7682C300F38745 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		D8E9726E2B7682C300F38745 /* DequeModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E972692B7682C300F38745 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = DequeModule;
+		};
+		D8E972702B7682C300F38745 /* HashTreeCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E972692B7682C300F38745 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HashTreeCollections;
+		};
+		D8E972722B7682C300F38745 /* HeapModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8E972692B7682C300F38745 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = HeapModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D805F1CC2B74BABD00C80D18 /* Project object */;
 }
