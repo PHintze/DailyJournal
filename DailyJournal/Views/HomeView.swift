@@ -12,87 +12,56 @@ struct HomeView: View {
     @Environment(\.scenePhase) var scene
     @StateObject var network = Network()
 
-    var currentDate = Date().formatted(date: .long, time: .omitted)
-    @State var storedDate = String()
+    var currentDate = Date().formatted(date: .abbreviated, time: .omitted)
     let defaults = UserDefaults.standard
+    let dateDefaultsKey = "LastRun"
 
-    @State var quote: Quote?
-    @Binding var journal: Journal?
-    @State private var showProfileView = false
-
-    var journalBinding: Binding<Journal> {
-        .init(get: { journal ?? Journal(date: .now, questions: journalQuestions, mood: nil)},
-              set: { journal = $0 })
-    }
+    let gradient = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
+                                  startPoint: UnitPoint(x: 0.5, y: 0.5), endPoint: .bottom)
 
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Quote of the day:")
-                    .font(
-                        .system(size: 34, design: .rounded)
-                        .weight(.heavy)
-                    )
+            ZStack {
+                gradient
+                    .ignoresSafeArea()
+                VStack {
+                    Text("Quote of the day:")
+                        .font(
+                            .system(size: 34, design: .rounded)
+                            .weight(.heavy)
+                        )
+                        .foregroundStyle(.accent)
 
-                Text(currentDate)
-                Text("\(storedDate)")
-                Text(defaults.object(forKey: "LastRun") as? String ?? String())
-                Button("Change Date") {
-                    storedDate = Date().addingTimeInterval(TimeInterval(86400*7)).formatted(date: .long, time: .omitted)
-                }
-                Group {
-                    if let quote {
-                        Text("\(quote.content)")
-                            .font(.title3)
-                            .bold()
-                            .fontDesign(.serif)
-                        Text("\(quote.author)")
-                            .font(.headline)
-                            .fontDesign(.serif)
+                    Group {
+                        if let quote = network.quote {
+                            Text("\(quote.content)")
+                                .font(.title3)
+                                .bold()
+                                .fontDesign(.serif)
+                            Text("\(quote.author)")
+                                .font(.headline)
+                                .fontDesign(.serif)
+                        }
                     }
-                }
 
-                .onChange(of: scene) {
-                    if scene == .active {
-                            quote = network.quote
-                        print("Active")
+                    .onChange(of: scene) {
+                        if scene == .active {
+                            Task {
+                                if currentDate != defaults.string(forKey: dateDefaultsKey) {
+                                    await network.getRandomQuote()
+                                    defaults.setValue(currentDate, forKey: dateDefaultsKey)
+                                }
+                            }
+                        }
                     }
-                    print(quote?.author)
-                    print(quote?.content)
+                    .padding()
                 }
             }
-            .padding()
-//            .onAppear {
-//                if currentDate != storedDate {
-//                    quote = network.quote
-//                    defaults.set(Date().formatted(date: .long, time: .omitted), forKey: "LastRun")
-//                    storedDate = defaults.object(forKey: "LastRun") as? String ?? String()
-//                }
-//            }
-
-            Spacer()
-
-            NavigationLink("Start Journaling", destination: CreateJournalView(journal: journalBinding))
-                .background(.plantation)
-                .buttonStyle(.bordered)
-                .controlSize(.large)
-                .tint(.accentColor)
-                .font(.title3)
-
-            Spacer()
-                .toolbar {
-                        Button {
-                            showProfileView = true
-                        } label: {
-                            Label("Profile", systemImage: "person.crop.circle")
-                        }
-                }
         }
-
     }
 }
 
 #Preview {
-    HomeView(quote: Quote(id: UUID(), content: "Content", author: "Author"), journal: .constant(Journal.sampleData[0]))
+    HomeView()
         .environmentObject(Network())
 }

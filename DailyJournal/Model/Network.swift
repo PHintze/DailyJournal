@@ -30,6 +30,7 @@ class Network: ObservableObject {
                 self.quote = decodedData[0]
                 // Prints the first quote to the console
                 print(decodedData[0])
+                print(Date().formatted(date: .omitted, time: .shortened))
             }
         } catch {
             print("Error fetching data from API: \(error)")

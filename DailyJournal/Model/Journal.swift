@@ -10,112 +10,75 @@ import SwiftData
 import SwiftUI
 
 @Model
-class Journal {
+class Journal: Identifiable {
     var date: Date
     var formattedDate: String
-    var questions: [Question]
-    var mood: Mood?
+    var mood: Mood
+    var title: String
+    var content: String
+    var id: UUID
 
-    init(date: Date, questions: [Question], mood: Mood? = nil) {
+    init(date: Date, mood: Mood = .awesome, title: String, content: String, id: UUID = UUID()) {
         self.date = date
         self.formattedDate = date.formatted(date: .abbreviated, time: .omitted)
-        self.questions = questions
         self.mood = mood
-
+        self.title = title
+        self.content = content
+        self.id = id
     }
 }
-
-extension Journal {
-    struct Question: Codable, Identifiable {
-        var id: Int
-        var text: String
-        var answer: String
-
-        init(id: Int, text: String, answer: String = "") {
-            self.id = id
-            self.text = text
-            self.answer = answer
-        }
-    }
- }
-
-// struct questions {
-//    enum questions {
-//
-//    }
-// }
-
-let journalQuestions: [Journal.Question] =
-    [
-        Journal.Question(
-            id: 1,
-            text: "I am grateful for..."),
-        Journal.Question(
-            id: 2,
-            text: "This is how I will make today great"),
-        Journal.Question(
-            id: 3,
-            text: "Positive affirmation"),
-        Journal.Question(
-            id: 4,
-            text: "My good dead today"),
-        Journal.Question(
-            id: 5,
-            text: "How I will improve"),
-        Journal.Question(
-            id: 6,
-            text: "Great things I experienced today")
-    ]
-
-let journalQuestionsExamples: [Journal.Question] =
-    [
-        Journal.Question(
-            id: 1,
-            text: "I am grateful for...",
-            answer: "That the current weather is so great."),
-        Journal.Question(
-            id: 2,
-            text: "This is how I will make today great",
-            answer: "I will be very productive today."),
-        Journal.Question(
-            id: 3,
-            text: "Positive affirmation",
-            answer: "Believe in yourself."),
-        Journal.Question(
-            id: 4,
-            text: "My good deed today",
-            answer: "To help the neighbour."),
-        Journal.Question(
-            id: 5,
-            text: "How I will improve",
-            answer: "I will go earlier to sleep."),
-        Journal.Question(
-            id: 6,
-            text: "Great things I experienced today",
-            answer: "I run my first 10k today.")
-    ]
 
 extension Journal {
     static let sampleData: [Journal] =
     [
         Journal(date: .now.addingTimeInterval(TimeInterval(86400 * -Int.random(in: 0..<9))),
-                questions: journalQuestionsExamples,
-                mood: .awesome),
+                mood: .awesome,
+               title: "My first journal",
+               content: """
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                """),
         Journal(date: .now.addingTimeInterval(TimeInterval(86400 * -Int.random(in: 0..<9))),
-                questions: journalQuestionsExamples,
-                mood: .bad),
+                mood: .bad,
+                title: "My first journal",
+                content: """
+                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                 et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                 """),
         Journal(date: .now.addingTimeInterval(TimeInterval(86400 * -Int.random(in: 0..<9))),
-                questions: journalQuestionsExamples,
-                mood: .happy),
+                mood: .happy,
+                title: "My first journal",
+                content: """
+                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                 et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                 """),
         Journal(date: .now.addingTimeInterval(TimeInterval(86400 * -Int.random(in: 0..<9))),
-                questions: journalQuestionsExamples,
-                mood: .awesome),
+                mood: .awesome,
+                title: "My first journal",
+                content: """
+                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                 et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                 """),
         Journal(date: .now.addingTimeInterval(TimeInterval(86400 * -Int.random(in: 0..<9))),
-                questions: journalQuestionsExamples,
-                mood: .bad),
+                mood: .bad,
+                title: "My first journal",
+                content: """
+                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                 et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                 """),
         Journal(date: .now.addingTimeInterval(TimeInterval(86400 * -Int.random(in: 0..<9))),
-                questions: journalQuestionsExamples,
-                mood: .happy)
+                mood: .happy,
+                title: "My first journal",
+                content: """
+                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                 labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                 et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                 """)
     ]
 }
 extension Journal {

@@ -13,42 +13,47 @@ struct DatePickerSheetView: View {
 
     var body: some View {
         NavigationStack {
-            Form {
-                Section {
-                    VStack {
+
+                Form {
+                    Section {
+                        VStack {
+                            HStack {
+                                Label("Select Date", systemImage: "calendar")
+                                    .labelStyle(.titleAndIcon)
+                                    .bold()
+                                Spacer()
+                            }
+                            DatePicker("Enter date", selection: $searchDate, displayedComponents: .date)
+                                .datePickerStyle(.graphical)
+
+                            Divider()
+
+                            Button("Done") {
+                                dismiss()
+                            }
+                            .bold()
+
+                        }
+                        .listRowBackground(Color.listRow)
+                    }
+
+                    Section {
                         HStack {
-                            Label("Select Date", systemImage: "calendar")
-                                .labelStyle(.titleAndIcon)
-                                .bold()
+                            Spacer()
+                            Button("Cancel") {
+                                searchDate = .now
+                                dismiss()
+                            }
+                            .bold()
                             Spacer()
                         }
-                        DatePicker("Enter date", selection: $searchDate, displayedComponents: .date)
-                            .datePickerStyle(.graphical)
-
-                        Divider()
-
-                        Button("Done") {
-                            dismiss()
-                        }
-                        .bold()
-
                     }
-                }
+                    .listRowBackground(Color.listRow)
 
-                Section {
-                    HStack {
-                        Spacer()
-                        Button("Cancel") {
-                            searchDate = .now
-                            dismiss()
-                        }
-                        .bold()
-                        Spacer()
-                    }
                 }
+                .listSectionSpacing(10)
+                .scrollContentBackground(.hidden)
             }
-            .listSectionSpacing(10)
-        }
     }
 }
 

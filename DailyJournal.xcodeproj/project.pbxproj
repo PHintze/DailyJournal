@@ -18,6 +18,9 @@
 		D805F1F12B74C8BC00C80D18 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F02B74C8BC00C80D18 /* ProfileView.swift */; };
 		D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F22B74CD1D00C80D18 /* Quote.swift */; };
 		D805F1FB2B7512F100C80D18 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1FA2B7512F100C80D18 /* Network.swift */; };
+		D8300D4A2B86268800FED422 /* CreateJournalToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */; };
+		D8300D4E2B88784B00FED422 /* JournalHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */; };
+		D8300D502B89CE9E00FED422 /* JournalDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */; };
 		D88044602B7B4F7A004E8BE8 /* CreateJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */; };
 		D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */; };
 		D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */; };
@@ -45,6 +48,9 @@
 		D805F1F02B74C8BC00C80D18 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D805F1F22B74CD1D00C80D18 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D805F1FA2B7512F100C80D18 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalToolbarView.swift; sourceTree = "<group>"; };
+		D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryRowView.swift; sourceTree = "<group>"; };
+		D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailEditView.swift; sourceTree = "<group>"; };
 		D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalView.swift; sourceTree = "<group>"; };
 		D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryToolbarView.swift; sourceTree = "<group>"; };
@@ -126,10 +132,13 @@
 				D8E972752B76900200F38745 /* MoodHistoryView.swift */,
 				D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */,
 				D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */,
+				D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */,
 				D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */,
 				D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */,
 				D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */,
+				D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */,
 				D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */,
+				D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */,
 				D805F1F02B74C8BC00C80D18 /* ProfileView.swift */,
 			);
 			path = Views;
@@ -249,14 +258,17 @@
 				D805F1DA2B74BABD00C80D18 /* ContentView.swift in Sources */,
 				D805F1E62B74BAFE00C80D18 /* Journal.swift in Sources */,
 				D8E972782B76A84B00F38745 /* MoodEntry.swift in Sources */,
+				D8300D502B89CE9E00FED422 /* JournalDetailEditView.swift in Sources */,
 				D88044682B7F596B004E8BE8 /* DatePickerSheetView.swift in Sources */,
 				D805F1EB2B74C29E00C80D18 /* HomeView.swift in Sources */,
 				D805F1EF2B74C82600C80D18 /* JournalHistoryView.swift in Sources */,
+				D8300D4A2B86268800FED422 /* CreateJournalToolbarView.swift in Sources */,
 				D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */,
 				D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */,
 				D805F1FB2B7512F100C80D18 /* Network.swift in Sources */,
 				D8E9727B2B78CA1500F38745 /* PreviewSampleData.swift in Sources */,
 				D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */,
+				D8300D4E2B88784B00FED422 /* JournalHistoryRowView.swift in Sources */,
 				D805F1D82B74BABD00C80D18 /* DailyJournalApp.swift in Sources */,
 				D805F1F12B74C8BC00C80D18 /* ProfileView.swift in Sources */,
 				D805F1ED2B74C42000C80D18 /* MoodButtonView.swift in Sources */,

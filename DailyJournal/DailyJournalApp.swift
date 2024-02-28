@@ -11,10 +11,9 @@ import SwiftUI
 @main
 struct DailyJournalApp: App {
     var modelContainer: ModelContainer
-    @State var quote: Quote?
     @State var moodHistory: [MoodEntry]?
     @State var journal: Journal?
-    @State var sortNewestFirst: SortOrder = .forward
+    @State var sortNewestFirst: SortOrder = .reverse
     @State var searchDate: Date = Date()
 
     var network = Network()
@@ -30,8 +29,7 @@ struct DailyJournalApp: App {
 
     var body: some Scene {
         WindowGroup {
-                ContentView(quote: $quote,
-                            moodHistory: moodHistory,
+                ContentView(moodHistory: moodHistory,
                             journal: $journal,
                             sortNewestFirst: $sortNewestFirst,
                             searchDate: $searchDate)

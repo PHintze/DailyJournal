@@ -8,28 +8,56 @@
 import SwiftUI
 
 struct JournalDetailView: View {
-    var journal: Journal
+    let journal: Journal
+
+    let gradient = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
+                                  startPoint: .top, endPoint: .bottom)
 
     var body: some View {
-        Text("Date: \(journal.date)")
-        Text("Question 1: \(journal.questions[0].text)")
-        Text("Answer 1: \(journal.questions[0].answer)")
+        VStack {
+            HStack {
+                HStack {
+                    Text("\(journal.date.formatted(.dateTime.day()))")
+                        .font(.title)
+                        .bold()
+                        .underline()
+                    VStack {
+                        Text("\(journal.date.formatted(.dateTime.month().year()))")
+                        Text("\(journal.date.formatted(.dateTime.weekday(.wide)))")
+                    }
+                }
 
-        Text("Question 2: \(journal.questions[1].text)")
-        Text("Answer 2: \(journal.questions[1].answer)")
+                Spacer()
 
-        Text("Question 3: \(journal.questions[2].text)")
-        Text("Answer 3: \(journal.questions[2].answer)")
+                ZStack {
+                }
+                .frame(width: 85, height: 35)
+                .background(journal.mood.moodDetails.color)
+                .clipShape(RoundedRectangle(cornerRadius: 8.0))
+                .opacity(0.3)
+                .overlay {
+                    Text(journal.mood.moodDetails.name)
+                        .foregroundStyle(journal.mood.moodDetails.color)
+                }
+            }
 
-        Text("Question 4: \(journal.questions[3].text)")
-        Text("Answer 4: \(journal.questions[3].answer)")
+            Text(journal.title)
+                .foregroundStyle(.accent)
+                .font(
+                    .system(size: 34, design: .rounded)
+                    .weight(.heavy)
+                )
 
-        Text("Question 5: \(journal.questions[4].text)")
-        Text("Answer 5: \(journal.questions[4].answer)")
-
-        Text("Question 6: \(journal.questions[5].text)")
-        Text("Answer 6: \(journal.questions[5].answer)")
-
+            HStack {
+                Text(journal.content)
+                Spacer()
+            }
+            Spacer()
+        }
+        .padding()
+        .background(gradient)
+        .navigationTitle("Details")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

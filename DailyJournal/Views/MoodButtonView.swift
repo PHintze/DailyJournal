@@ -10,30 +10,30 @@ import SwiftUI
 
 struct MoodButtonView: View {
     @Environment(\.modelContext) var modelContext
+    @Binding var journal: Journal
 
     let gridButtonLayout = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
-        NavigationStack {
-            LazyVGrid(columns: gridButtonLayout, spacing: 10) {
-                ForEach(Mood.allCases) { item in
-                    Button {
-                        let newEntry = MoodEntry(date: .now, mood: item)
-                        modelContext.insert(newEntry)
-                    } label: {
-                        Text(item.moodDetails.name)
-                            .frame(minWidth: 100, minHeight: 50)
-                    }
-                    .buttonStyle(.bordered)
-                    .controlSize(.large)
-                    .tint(item.moodDetails.color)
+        LazyVGrid(columns: gridButtonLayout, spacing: 5) {
+            ForEach(Mood.allCases) { item in
+                Button {
+                    let newEntry = MoodEntry(date: .now, mood: item)
+                    journal.mood = newEntry.mood
+                    modelContext.insert(newEntry)
+                } label: {
+                    Text(item.moodDetails.name)
+                        .frame(minWidth: 75, minHeight: 25)
                 }
+                .buttonStyle(.bordered)
+                .tint(item.moodDetails.color)
             }
-            .padding()
         }
+        .padding()
+        .background(.listRow)
     }
 }
 
 #Preview {
-    MoodButtonView()
+    MoodButtonView(journal: .constant(Journal.sampleData[0]))
 }

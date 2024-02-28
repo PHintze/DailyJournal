@@ -8,26 +8,46 @@
 import SwiftUI
 
 struct JournalHistoryToolbarView: View {
+    @Environment(\.modelContext) var modelContext
     @Binding var searchDate: Date
     @State private var showDatePicker = false
     @Binding var sortNewestFirst: SortOrder
 
     var body: some View {
+        HStack {
+            Menu {
+                Button("Search by Date") {
+                    showDatePicker.toggle()
+                }
+                Picker("Sort Order", selection: $sortNewestFirst) {
+                    Text("Newest to Oldest").tag(SortOrder.reverse)
+                    Text("Oldest to Newest").tag(SortOrder.forward)
+                }
+            } label: {
+                Label("Sort", systemImage: "line.3.horizontal.decrease.circle")
+                    .symbolVariant(searchDate.formatted(date: .abbreviated, time: .omitted) !=
+                                   Date().formatted(date: .abbreviated, time: .omitted) ? .fill : .none)
 
-        Menu {
-            Button("Search by Date") {
-                showDatePicker.toggle()
             }
-            Picker("Sort Order", selection: $sortNewestFirst) {
-                Text("Newest to Oldest").tag(SortOrder.reverse)
-                Text("Oldest to Newest").tag(SortOrder.forward)
+            .sheet(isPresented: $showDatePicker) {
+                DatePickerSheetView(searchDate: $searchDate)
+                    .presentationDetents([.fraction(0.7)])
+                    .presentationBackground(.purpleGradient)
             }
-        } label: {
-            Label("Sort", systemImage: "line.3.horizontal.decrease.circle")
-        }
-        .sheet(isPresented: $showDatePicker) {
-            DatePickerSheetView(searchDate: $searchDate)
-                .presentationDetents([.fraction(0.7)])
+#if DEBUG
+            Button {
+                do {
+                    try modelContext.delete(model: Journal.self)
+                    for selectedJournal in Journal.sampleData {
+                        modelContext.insert(selectedJournal)
+                    }
+                } catch {
+                    print("Failed to delete journal data.")
+                }
+            } label: {
+                Label("Add Samples", systemImage: "flame")
+            }
+#endif
         }
     }
 }

@@ -23,18 +23,6 @@ class PreviewSampleData {
 
                 for number in 1...7 {
                     let journalEntry = Journal.sampleData[number]
-//
-//                    Journal(
-//                        day: .now,
-//                        questions: [
-//                            Journal.Question(text: "I am grateful for...", answer: ""),
-//                            Journal.Question(text: "This is how I will make today great", answer: ""),
-//                            Journal.Question(text: "Positive affirmation", answer: ""),
-//                            Journal.Question(text: "My good dead today", answer: ""),
-//                            Journal.Question(text: "How I will improve", answer: ""),
-//                            Journal.Question(text: "Great things I experienced today", answer: "")
-//                        ],
-//                        mood: .awesome)
                     container.mainContext.insert(journalEntry)
                 }
 
