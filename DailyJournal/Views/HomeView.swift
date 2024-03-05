@@ -11,11 +11,7 @@ struct HomeView: View {
     @Environment (\.modelContext) var modelContext
     @Environment(\.scenePhase) var scene
 
-    @StateObject var network = Network()
-
-    var currentDate = Date().formatted(date: .abbreviated, time: .omitted)
-    let defaults = UserDefaults.standard
-    let dateDefaultsKey = "LastRun"
+    @EnvironmentObject var quote: Quote
 
     var body: some View {
         NavigationStack {
@@ -31,26 +27,13 @@ struct HomeView: View {
                         .foregroundStyle(.accent)
 
                     Group {
-                        if let quote = network.quote {
-                            Text("\(quote.content)")
-                                .font(.title3)
-                                .bold()
-                                .fontDesign(.serif)
-                            Text("\(quote.author)")
-                                .font(.headline)
-                                .fontDesign(.serif)
-                        }
-                    }
-
-                    .onChange(of: scene) {
-                        if scene == .active {
-                            Task {
-                                if currentDate != defaults.string(forKey: dateDefaultsKey) {
-                                    await network.getRandomQuote()
-                                    defaults.setValue(currentDate, forKey: dateDefaultsKey)
-                                }
-                            }
-                        }
+                        Text("\(quote.content)")
+                            .font(.title3)
+                            .bold()
+                            .fontDesign(.serif)
+                        Text("\(quote.author)")
+                            .font(.headline)
+                            .fontDesign(.serif)
                     }
                     .padding()
                 }
@@ -61,5 +44,4 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
-        .environmentObject(Network())
 }

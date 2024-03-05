@@ -15,13 +15,16 @@ struct DailyJournalApp: App {
     @State var journal: Journal?
     @State var sortNewestFirst: SortOrder = .reverse
     @State var searchDate: Date = Date()
+    @State var quote: Quote = .default
 
     @StateObject private var securityController = SecurityController()
 
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
 
     var modelContainer: ModelContainer
-    var network = Network()
+
+    var currentDateFormatted = Date().formatted(date: .abbreviated, time: .omitted)
+    let defaults = UserDefaults.standard
 
     init() {
         do {
@@ -39,7 +42,7 @@ struct DailyJournalApp: App {
                     ContentView(journal: $journal,
                                 sortNewestFirst: $sortNewestFirst,
                                 searchDate: $searchDate)
-                    .environmentObject(network)
+                    .environmentObject(quote)
                 } else {
                     LockedView()
                 }
@@ -47,9 +50,28 @@ struct DailyJournalApp: App {
                 ContentView(journal: $journal,
                             sortNewestFirst: $sortNewestFirst,
                             searchDate: $searchDate)
-                .environmentObject(network)
+                .environmentObject(quote)
             }
         }
         .modelContainer(modelContainer)
+        .onChange(of: scenePhase) {
+            switch scenePhase {
+            case .background, .inactive:
+                break
+            case .active:
+                Task {
+                    if currentDateFormatted != defaults.string(forKey: "LastRun") {
+                        if let quote = await RandomQuoteAPI.getRandomQuote() {
+                            self.quote = quote
+                            defaults.setValue(quote.author, forKey: "LastQuoteAuthor")
+                            defaults.setValue(quote.content, forKey: "LastQuoteContent")
+                            defaults.setValue(currentDateFormatted, forKey: "LastRun")
+                        }
+                    }
+                }
+            @unknown default:
+                break
+            }
+        }
     }
 }

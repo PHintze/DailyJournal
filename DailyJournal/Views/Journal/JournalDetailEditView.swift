@@ -10,9 +10,6 @@ import SwiftUI
 struct JournalDetailEditView: View {
     @Binding var journal: Journal
 
-    @Environment(\.modelContext) var modelContext
-    @Environment(\.dismiss) var dismiss
-
     @State private var showDatePicker = false
     @State private var showMoodView = false
 
@@ -88,31 +85,7 @@ struct JournalDetailEditView: View {
 
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    HStack {
-                        Menu {
-                            Button("Change Date") {
-                                showDatePicker.toggle()
-                            }
-                            Button(role: .destructive) {
-                                modelContext.delete(journal)
-                            } label: {
-                                Label("Delete", systemImage: "trash")
-                            }
-
-                        } label: {
-                            Label("Sort", systemImage: "ellipsis.circle")
-                                .labelStyle(.iconOnly)
-                        }
-                        Button {
-                            // updating the formatted date of the journal to the journal date so that the search
-                            // in the history view is working correctly
-                            journal.formattedDate = journal.date.formatted(date: .abbreviated, time: .omitted)
-                            dismiss()
-                        } label: {
-                            Text("Done")
-                                .bold()
-                        }
-                    }
+                   JournalToolbarView(journal: $journal, showDatePicker: $showDatePicker, showMoodView: $showMoodView)
                 }
             }
             .sheet(isPresented: $showDatePicker) {

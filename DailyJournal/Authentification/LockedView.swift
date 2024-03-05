@@ -14,10 +14,10 @@ struct LockedView: View {
     @StateObject private var securityController = SecurityController()
 
     var body: some View {
-//        ZStack {
-//            Background.gradient
-//                .ignoresSafeArea()
-//            VStack {
+        ZStack {
+            Background.gradient
+                .ignoresSafeArea()
+            VStack {
                 Button {
                     securityController.authenticate()
                 } label: {
@@ -29,16 +29,6 @@ struct LockedView: View {
                 .background(.indigo)
                 .foregroundStyle(.white)
                 .clipShape(.capsule)
-                .onChange(of: scenePhase) {
-                    switch scenePhase {
-                    case .background, .inactive:
-                        securityController.lockApp()
-                    case .active:
-                        securityController.showLockedViewIfEnabled()
-                    default:
-                        break
-                    }
-                }
 
                 VStack {
                     Text("Use Face ID to unlock DailyJournal")
@@ -49,8 +39,18 @@ struct LockedView: View {
                         .foregroundStyle(.gray)
                 }
             }
-//        }
-//    }
+        }
+        .onChange(of: scenePhase) {
+            switch scenePhase {
+            case .background, .inactive:
+                securityController.lockApp()
+            case .active:
+                securityController.showLockedViewIfEnabled()
+            default:
+                break
+            }
+        }
+    }
 }
 
 #Preview {

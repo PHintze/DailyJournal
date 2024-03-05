@@ -17,7 +17,7 @@
 		D805F1EF2B74C82600C80D18 /* JournalHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */; };
 		D805F1F12B74C8BC00C80D18 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F02B74C8BC00C80D18 /* SettingsView.swift */; };
 		D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F22B74CD1D00C80D18 /* Quote.swift */; };
-		D805F1FB2B7512F100C80D18 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1FA2B7512F100C80D18 /* Network.swift */; };
+		D805F1FB2B7512F100C80D18 /* RandomQuoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1FA2B7512F100C80D18 /* RandomQuoteAPI.swift */; };
 		D8300D4A2B86268800FED422 /* CreateJournalToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */; };
 		D8300D4E2B88784B00FED422 /* JournalHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */; };
 		D8300D502B89CE9E00FED422 /* JournalDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */; };
@@ -27,6 +27,7 @@
 		D8300D5C2B90733200FED422 /* SecurityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D5B2B90733200FED422 /* SecurityController.swift */; };
 		D8300D5E2B90767F00FED422 /* LockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D5D2B90767F00FED422 /* LockedView.swift */; };
 		D8300D622B97204000FED422 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D612B97204000FED422 /* Background.swift */; };
+		D8300D662B97652800FED422 /* JournalToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D652B97652800FED422 /* JournalToolbarView.swift */; };
 		D88044602B7B4F7A004E8BE8 /* CreateJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */; };
 		D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */; };
 		D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */; };
@@ -53,7 +54,7 @@
 		D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryView.swift; sourceTree = "<group>"; };
 		D805F1F02B74C8BC00C80D18 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D805F1F22B74CD1D00C80D18 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		D805F1FA2B7512F100C80D18 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		D805F1FA2B7512F100C80D18 /* RandomQuoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuoteAPI.swift; sourceTree = "<group>"; };
 		D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalToolbarView.swift; sourceTree = "<group>"; };
 		D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryRowView.swift; sourceTree = "<group>"; };
 		D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailEditView.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		D8300D5B2B90733200FED422 /* SecurityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityController.swift; sourceTree = "<group>"; };
 		D8300D5D2B90767F00FED422 /* LockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedView.swift; sourceTree = "<group>"; };
 		D8300D612B97204000FED422 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		D8300D652B97652800FED422 /* JournalToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalToolbarView.swift; sourceTree = "<group>"; };
 		D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalView.swift; sourceTree = "<group>"; };
 		D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryToolbarView.swift; sourceTree = "<group>"; };
@@ -133,7 +135,7 @@
 				D805F1E52B74BAFE00C80D18 /* Journal.swift */,
 				D8E972772B76A84B00F38745 /* MoodEntry.swift */,
 				D805F1F22B74CD1D00C80D18 /* Quote.swift */,
-				D805F1FA2B7512F100C80D18 /* Network.swift */,
+				D805F1FA2B7512F100C80D18 /* RandomQuoteAPI.swift */,
 				D8E972792B78C9F400F38745 /* Preview */,
 			);
 			path = Model;
@@ -188,6 +190,7 @@
 				D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */,
 				D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */,
 				D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */,
+				D8300D652B97652800FED422 /* JournalToolbarView.swift */,
 				D8E972752B76900200F38745 /* MoodHistoryView.swift */,
 				D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */,
 			);
@@ -319,13 +322,14 @@
 				D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */,
 				D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */,
 				D8300D582B8F57E100FED422 /* DateHelper.swift in Sources */,
-				D805F1FB2B7512F100C80D18 /* Network.swift in Sources */,
+				D805F1FB2B7512F100C80D18 /* RandomQuoteAPI.swift in Sources */,
 				D8300D5C2B90733200FED422 /* SecurityController.swift in Sources */,
 				D8E9727B2B78CA1500F38745 /* PreviewSampleData.swift in Sources */,
 				D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */,
 				D8300D4E2B88784B00FED422 /* JournalHistoryRowView.swift in Sources */,
 				D805F1D82B74BABD00C80D18 /* DailyJournalApp.swift in Sources */,
 				D805F1F12B74C8BC00C80D18 /* SettingsView.swift in Sources */,
+				D8300D662B97652800FED422 /* JournalToolbarView.swift in Sources */,
 				D805F1ED2B74C42000C80D18 /* MoodButtonView.swift in Sources */,
 				D8300D622B97204000FED422 /* Background.swift in Sources */,
 				D88044602B7B4F7A004E8BE8 /* CreateJournalView.swift in Sources */,
