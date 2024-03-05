@@ -10,15 +10,13 @@ import SwiftUI
 
 struct CreateJournalView: View {
     @Environment (\.modelContext) var modelContext
-    @State private var numberOfQuestions = 0
+
     @Binding var journal: Journal
-    @State private var showDatePicker = false
-    @State private var showMoodView = false
     @Binding var sortNewestFirst: SortOrder
     @Binding var searchDate: Date
 
-    let gradient = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
-                                  startPoint: .top, endPoint: .bottom)
+    @State private var showDatePicker = false
+    @State private var showMoodView = false
 
     var body: some View {
         NavigationStack {
@@ -46,15 +44,16 @@ struct CreateJournalView: View {
                     .buttonStyle(.bordered)
                     .tint(journal.mood.moodDetails.color)
                     .popover(isPresented: $showMoodView, attachmentAnchor: .point(.center)) {
-                      MoodHistoryView(journal: $journal)
+                        MoodHistoryView(journal: $journal)
                             .padding()
                             .presentationCompactAdaptation(.popover)
                             .frame(minWidth: 300, minHeight: 250)
+                            .background(.darkPurpleGradient)
                     }
                 }
 
                 TextField("Title", text: $journal.title, prompt: Text("Title"))
-                    .foregroundStyle(Color("Plantation"))
+                    .foregroundStyle(.accent)
                     .font(
                         .system(size: 34, design: .rounded)
                         .weight(.heavy)
@@ -86,17 +85,15 @@ struct CreateJournalView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     CreateJournalToolbarView(showDatePicker: $showDatePicker,
-                                             journal: $journal,
-                                             sortNewestFirst: $sortNewestFirst,
-                                             searchDate: $searchDate)
+                                             journal: $journal)
                 }
             }
             .sheet(isPresented: $showDatePicker) {
-                    DatePickerSheetView(searchDate: $journal.date)
-                        .presentationDetents([.fraction(0.7)])
-                        .presentationBackground(.purpleGradient)
+                DatePickerSheetView(searchDate: $journal.date)
+                    .presentationDetents([.fraction(0.7)])
+                    .presentationBackground(.clear)
             }
-            .background(gradient)
+            .background(Background.gradient)
         }
     }
 }

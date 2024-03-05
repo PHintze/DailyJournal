@@ -15,12 +15,18 @@
 		D805F1EB2B74C29E00C80D18 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1EA2B74C29E00C80D18 /* HomeView.swift */; };
 		D805F1ED2B74C42000C80D18 /* MoodButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */; };
 		D805F1EF2B74C82600C80D18 /* JournalHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */; };
-		D805F1F12B74C8BC00C80D18 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F02B74C8BC00C80D18 /* ProfileView.swift */; };
+		D805F1F12B74C8BC00C80D18 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F02B74C8BC00C80D18 /* SettingsView.swift */; };
 		D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1F22B74CD1D00C80D18 /* Quote.swift */; };
 		D805F1FB2B7512F100C80D18 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = D805F1FA2B7512F100C80D18 /* Network.swift */; };
 		D8300D4A2B86268800FED422 /* CreateJournalToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */; };
 		D8300D4E2B88784B00FED422 /* JournalHistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */; };
 		D8300D502B89CE9E00FED422 /* JournalDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */; };
+		D8300D562B8F543400FED422 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D552B8F543400FED422 /* NotificationManager.swift */; };
+		D8300D582B8F57E100FED422 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D572B8F57E100FED422 /* DateHelper.swift */; };
+		D8300D5A2B8F58FA00FED422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D592B8F58FA00FED422 /* AppDelegate.swift */; };
+		D8300D5C2B90733200FED422 /* SecurityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D5B2B90733200FED422 /* SecurityController.swift */; };
+		D8300D5E2B90767F00FED422 /* LockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D5D2B90767F00FED422 /* LockedView.swift */; };
+		D8300D622B97204000FED422 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8300D612B97204000FED422 /* Background.swift */; };
 		D88044602B7B4F7A004E8BE8 /* CreateJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */; };
 		D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */; };
 		D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */; };
@@ -45,12 +51,18 @@
 		D805F1EA2B74C29E00C80D18 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodButtonView.swift; sourceTree = "<group>"; };
 		D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryView.swift; sourceTree = "<group>"; };
-		D805F1F02B74C8BC00C80D18 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D805F1F02B74C8BC00C80D18 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		D805F1F22B74CD1D00C80D18 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		D805F1FA2B7512F100C80D18 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalToolbarView.swift; sourceTree = "<group>"; };
 		D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryRowView.swift; sourceTree = "<group>"; };
 		D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailEditView.swift; sourceTree = "<group>"; };
+		D8300D552B8F543400FED422 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		D8300D572B8F57E100FED422 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		D8300D592B8F58FA00FED422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8300D5B2B90733200FED422 /* SecurityController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityController.swift; sourceTree = "<group>"; };
+		D8300D5D2B90767F00FED422 /* LockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedView.swift; sourceTree = "<group>"; };
+		D8300D612B97204000FED422 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateJournalView.swift; sourceTree = "<group>"; };
 		D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryToolbarView.swift; sourceTree = "<group>"; };
@@ -97,6 +109,8 @@
 			children = (
 				D805F1D72B74BABD00C80D18 /* DailyJournalApp.swift */,
 				D805F1D92B74BABD00C80D18 /* ContentView.swift */,
+				D8300D5F2B91B58C00FED422 /* Notification */,
+				D8300D602B91B6B100FED422 /* Authentification */,
 				D805F1E92B74C24400C80D18 /* Views */,
 				D805F1E72B74BB0500C80D18 /* Model */,
 				D805F1DB2B74BABE00C80D18 /* Assets.xcassets */,
@@ -129,19 +143,55 @@
 			isa = PBXGroup;
 			children = (
 				D805F1EA2B74C29E00C80D18 /* HomeView.swift */,
-				D8E972752B76900200F38745 /* MoodHistoryView.swift */,
-				D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */,
+				D8300D642B975C3E00FED422 /* Journal */,
+				D8300D632B975C1C00FED422 /* Journal History */,
+				D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */,
+				D805F1F02B74C8BC00C80D18 /* SettingsView.swift */,
+				D8300D612B97204000FED422 /* Background.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D8300D5F2B91B58C00FED422 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				D8300D552B8F543400FED422 /* NotificationManager.swift */,
+				D8300D572B8F57E100FED422 /* DateHelper.swift */,
+				D8300D592B8F58FA00FED422 /* AppDelegate.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		D8300D602B91B6B100FED422 /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				D8300D5B2B90733200FED422 /* SecurityController.swift */,
+				D8300D5D2B90767F00FED422 /* LockedView.swift */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		D8300D632B975C1C00FED422 /* Journal History */ = {
+			isa = PBXGroup;
+			children = (
 				D805F1EE2B74C82600C80D18 /* JournalHistoryView.swift */,
 				D8300D4D2B88784B00FED422 /* JournalHistoryRowView.swift */,
 				D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */,
-				D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */,
+			);
+			path = "Journal History";
+			sourceTree = "<group>";
+		};
+		D8300D642B975C3E00FED422 /* Journal */ = {
+			isa = PBXGroup;
+			children = (
 				D880445F2B7B4F7A004E8BE8 /* CreateJournalView.swift */,
 				D8300D492B86268800FED422 /* CreateJournalToolbarView.swift */,
 				D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */,
 				D8300D4F2B89CE9D00FED422 /* JournalDetailEditView.swift */,
-				D805F1F02B74C8BC00C80D18 /* ProfileView.swift */,
+				D8E972752B76900200F38745 /* MoodHistoryView.swift */,
+				D805F1EC2B74C42000C80D18 /* MoodButtonView.swift */,
 			);
-			path = Views;
+			path = Journal;
 			sourceTree = "<group>";
 		};
 		D8E972792B78C9F400F38745 /* Preview */ = {
@@ -254,8 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8300D5E2B90767F00FED422 /* LockedView.swift in Sources */,
+				D8300D5A2B8F58FA00FED422 /* AppDelegate.swift in Sources */,
 				D8E972762B76900200F38745 /* MoodHistoryView.swift in Sources */,
 				D805F1DA2B74BABD00C80D18 /* ContentView.swift in Sources */,
+				D8300D562B8F543400FED422 /* NotificationManager.swift in Sources */,
 				D805F1E62B74BAFE00C80D18 /* Journal.swift in Sources */,
 				D8E972782B76A84B00F38745 /* MoodEntry.swift in Sources */,
 				D8300D502B89CE9E00FED422 /* JournalDetailEditView.swift in Sources */,
@@ -265,13 +318,16 @@
 				D8300D4A2B86268800FED422 /* CreateJournalToolbarView.swift in Sources */,
 				D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */,
 				D805F1F32B74CD1D00C80D18 /* Quote.swift in Sources */,
+				D8300D582B8F57E100FED422 /* DateHelper.swift in Sources */,
 				D805F1FB2B7512F100C80D18 /* Network.swift in Sources */,
+				D8300D5C2B90733200FED422 /* SecurityController.swift in Sources */,
 				D8E9727B2B78CA1500F38745 /* PreviewSampleData.swift in Sources */,
 				D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */,
 				D8300D4E2B88784B00FED422 /* JournalHistoryRowView.swift in Sources */,
 				D805F1D82B74BABD00C80D18 /* DailyJournalApp.swift in Sources */,
-				D805F1F12B74C8BC00C80D18 /* ProfileView.swift in Sources */,
+				D805F1F12B74C8BC00C80D18 /* SettingsView.swift in Sources */,
 				D805F1ED2B74C42000C80D18 /* MoodButtonView.swift in Sources */,
+				D8300D622B97204000FED422 /* Background.swift in Sources */,
 				D88044602B7B4F7A004E8BE8 /* CreateJournalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +466,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock journals.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -440,6 +497,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock journals.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

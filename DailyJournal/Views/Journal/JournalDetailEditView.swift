@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct JournalDetailEditView: View {
+    @Binding var journal: Journal
+
     @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
-    @State private var showDatePicker = false
-    @Binding var journal: Journal
-    @State private var placerholderText = "Start writing..."
-    @State private var showMoodView = false
 
-    let gradient = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
-                                  startPoint: .top, endPoint: .bottom)
+    @State private var showDatePicker = false
+    @State private var showMoodView = false
 
     var body: some View {
         NavigationStack {
@@ -45,7 +43,7 @@ struct JournalDetailEditView: View {
                             showMoodView.toggle()
                         } label: {
                             Text((journal.mood.moodDetails.name))
-                               .foregroundStyle(journal.mood.moodDetails.color)
+                                .foregroundStyle(journal.mood.moodDetails.color)
 
                         }
                         .popover(isPresented: $showMoodView, attachmentAnchor: .point(.center)) {
@@ -53,7 +51,7 @@ struct JournalDetailEditView: View {
                                 .padding()
                                 .presentationCompactAdaptation(.popover)
                                 .frame(minWidth: 300, minHeight: 250)
-                                .background(.listRow)
+                                .background(.darkPurpleGradient)
                         }
 
                     }
@@ -86,7 +84,7 @@ struct JournalDetailEditView: View {
                 Spacer()
             }
             .padding()
-            .background(gradient)
+            .background(Background.gradient)
 
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -118,9 +116,9 @@ struct JournalDetailEditView: View {
                 }
             }
             .sheet(isPresented: $showDatePicker) {
-                    DatePickerSheetView(searchDate: $journal.date)
-                        .presentationDetents([.fraction(0.7)])
-                        .presentationBackground(.purpleGradient)
+                DatePickerSheetView(searchDate: $journal.date)
+                    .presentationDetents([.fraction(0.7)])
+                    .presentationBackground(.clear)
             }
         }
     }

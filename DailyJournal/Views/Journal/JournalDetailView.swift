@@ -10,9 +10,6 @@ import SwiftUI
 struct JournalDetailView: View {
     let journal: Journal
 
-    let gradient = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
-                                  startPoint: .top, endPoint: .bottom)
-
     var body: some View {
         VStack {
             HStack {
@@ -41,12 +38,15 @@ struct JournalDetailView: View {
                 }
             }
 
-            Text(journal.title)
-                .foregroundStyle(.accent)
-                .font(
-                    .system(size: 34, design: .rounded)
-                    .weight(.heavy)
-                )
+            HStack {
+                Text(journal.title)
+                    .foregroundStyle(.accent)
+                    .font(
+                        .system(size: 34, design: .rounded)
+                        .weight(.heavy)
+                    )
+                Spacer()
+            }
 
             HStack {
                 Text(journal.content)
@@ -55,7 +55,7 @@ struct JournalDetailView: View {
             Spacer()
         }
         .padding()
-        .background(gradient)
+        .background(Background.gradient)
         .navigationTitle("Details")
         .navigationBarTitleDisplayMode(.inline)
     }

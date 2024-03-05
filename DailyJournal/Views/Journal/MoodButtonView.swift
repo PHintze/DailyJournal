@@ -9,8 +9,10 @@ import SwiftData
 import SwiftUI
 
 struct MoodButtonView: View {
-    @Environment(\.modelContext) var modelContext
     @Binding var journal: Journal
+
+    @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) var dismiss
 
     let gridButtonLayout = [GridItem(.flexible()), GridItem(.flexible())]
 
@@ -18,9 +20,8 @@ struct MoodButtonView: View {
         LazyVGrid(columns: gridButtonLayout, spacing: 5) {
             ForEach(Mood.allCases) { item in
                 Button {
-                    let newEntry = MoodEntry(date: .now, mood: item)
-                    journal.mood = newEntry.mood
-                    modelContext.insert(newEntry)
+                    journal.mood = item
+                    dismiss()
                 } label: {
                     Text(item.moodDetails.name)
                         .frame(minWidth: 75, minHeight: 25)
@@ -30,7 +31,7 @@ struct MoodButtonView: View {
             }
         }
         .padding()
-        .background(.listRow)
+        .background(.clear)
     }
 }
 

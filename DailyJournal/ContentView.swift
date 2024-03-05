@@ -6,21 +6,18 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
     @Environment(\.modelContext) var modelContext
 
-    @State var moodHistory: [MoodEntry]?
     @Binding var journal: Journal?
     @Binding var sortNewestFirst: SortOrder
     @Binding var searchDate: Date
 
     @State private var showCreateJournalView = false
-    @State private var showProfileView = false
+    @State private var showSettingsView = false
     @State var selectedTab = 1
-
-    let gradient = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
-                                  startPoint: .top, endPoint: .bottom)
 
     var journalBinding: Binding<Journal> {
         .init(get: { journal ?? Journal(date: .now,
@@ -42,9 +39,9 @@ struct ContentView: View {
                     JournalHistoryView(sortNewestFirst: $sortNewestFirst,
                                        searchDate: $searchDate,
                                        selectedJournal: journalBinding)
-                        .tabItem {
-                            Label("Journals", systemImage: "calendar.badge.clock.rtl")
-                        }.tag(2)
+                    .tabItem {
+                        Label("Journals", systemImage: "calendar.badge.clock.rtl")
+                    }.tag(2)
                 }
                 .labelStyle(.iconOnly)
                 .tint(.accentColor)
@@ -58,16 +55,13 @@ struct ContentView: View {
                         .bold()
                 }
                 .frame(width: 50, height: 50)
-                .background(.tint)
+                .background(.indigo)
                 .clipShape(Circle())
                 .sheet(isPresented: $showCreateJournalView) {
                     CreateJournalView(journal: journalBinding,
                                       sortNewestFirst: $sortNewestFirst,
                                       searchDate: $searchDate)
                 }
-//                .navigationDestination(isPresented: $showCreateJournalView) {
-//                    CreateJournalView(journal: $journal, sortNewestFirst: $sortNewestFirst, searchDate: $searchDate)
-//                }
             }
             .ignoresSafeArea(.keyboard)
             .toolbar {
@@ -75,12 +69,12 @@ struct ContentView: View {
                 case 1:
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            showProfileView = true
+                            showSettingsView = true
                         } label: {
-                            Label("Profile", systemImage: "person.crop.circle")
+                            Label("Settings", systemImage: "gearshape")
                         }
-                        .navigationDestination(isPresented: $showProfileView) {
-                            ProfileView()
+                        .navigationDestination(isPresented: $showSettingsView) {
+                            SettingsView()
                         }
                         .navigationTitle("Daily Quote")
                         .navigationBarTitleDisplayMode(.inline)
@@ -93,12 +87,12 @@ struct ContentView: View {
                 default:
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            showProfileView = true
+                            showSettingsView = true
                         } label: {
-                            Label("Profile", systemImage: "person.crop.circle")
+                            Label("Settings", systemImage: "gearshape")
                         }
-                        .navigationDestination(isPresented: $showProfileView) {
-                            ProfileView()
+                        .navigationDestination(isPresented: $showSettingsView) {
+                            SettingsView()
                         }
                     }
                 }
@@ -116,6 +110,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(moodHistory: MoodEntry.moodHistorySampleData, journal: .constant(Journal.sampleData[0]),
+    ContentView(journal: .constant(Journal.sampleData[0]),
                 sortNewestFirst: .constant(SortOrder.forward), searchDate: .constant(.now))
 }

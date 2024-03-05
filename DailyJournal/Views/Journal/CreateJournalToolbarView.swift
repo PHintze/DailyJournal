@@ -8,21 +8,12 @@
 import SwiftData
 import SwiftUI
 
-struct RedBorderMenuStyle: MenuStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        Menu(configuration)
-            .border(Color.red)
-            .foregroundStyle(.green)
-    }
-}
-
 struct CreateJournalToolbarView: View {
-    @Environment(\.modelContext) var modelContext
-    @Environment(\.dismiss) var dismiss
     @Binding var showDatePicker: Bool
     @Binding var journal: Journal
-    @Binding var sortNewestFirst: SortOrder
-    @Binding var searchDate: Date
+
+    @Environment(\.modelContext) var modelContext
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         NavigationStack {
@@ -58,7 +49,5 @@ struct CreateJournalToolbarView: View {
 
 #Preview {
     CreateJournalToolbarView(showDatePicker: .constant(false),
-                             journal: .constant(Journal.sampleData[0]),
-                             sortNewestFirst: .constant(.forward),
-                             searchDate: .constant(.now))
+                             journal: .constant(Journal.sampleData[0]))
 }

@@ -14,12 +14,12 @@ class PreviewSampleData {
     static let previewContainer: ModelContainer = {
             do {
                 let config = ModelConfiguration(isStoredInMemoryOnly: true)
-                let container = try ModelContainer(for: MoodEntry.self, Journal.self, configurations: config)
+                let container = try ModelContainer(for: Journal.self, configurations: config)
 
-                for number in 1...7 {
-                    let moodEntry = MoodEntry(date: .now - TimeInterval(number), mood: .allCases.randomElement()!)
-                    container.mainContext.insert(moodEntry)
-                }
+//                for number in 1...7 {
+//                    let moodEntry = MoodEntry(date: .now - TimeInterval(number), mood: .allCases.randomElement()!)
+//                    container.mainContext.insert(moodEntry)
+//                }
 
                 for number in 1...7 {
                     let journalEntry = Journal.sampleData[number]

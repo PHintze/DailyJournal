@@ -9,9 +9,10 @@ import SwiftUI
 
 struct JournalHistoryRow: View {
     @Environment(\.modelContext) var modelContext
-    @Binding var showJournalDetailEditView: Bool
 
     @Bindable var journal: Journal
+
+    @Binding var showJournalDetailEditView: Bool
     @Binding var selectedJournal: Journal
 
     var body: some View {
@@ -79,7 +80,6 @@ struct JournalHistoryRow: View {
 }
 
 #Preview {
-    JournalHistoryRow(showJournalDetailEditView: .constant(false),
-                      journal: Journal.sampleData[0],
+    JournalHistoryRow(journal: Journal.sampleData[0], showJournalDetailEditView: .constant(false),
                       selectedJournal: .constant(Journal.sampleData[0]))
 }

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct DatePickerSheetView: View {
-    @Environment(\.dismiss) var dismiss
     @Binding var searchDate: Date
+
+    @Environment(\.dismiss) var dismiss
 
     var body: some View {
         NavigationStack {
@@ -32,9 +33,7 @@ struct DatePickerSheetView: View {
                                 dismiss()
                             }
                             .bold()
-
                         }
-                        .listRowBackground(Color.listRow)
                     }
 
                     Section {
@@ -45,12 +44,12 @@ struct DatePickerSheetView: View {
                                 dismiss()
                             }
                             .bold()
+                            .foregroundStyle(.indigo)
                             Spacer()
                         }
                     }
-                    .listRowBackground(Color.listRow)
-
                 }
+                .tint(.indigo)
                 .listSectionSpacing(10)
                 .scrollContentBackground(.hidden)
             }

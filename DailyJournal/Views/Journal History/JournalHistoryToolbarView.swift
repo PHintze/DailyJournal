@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct JournalHistoryToolbarView: View {
-    @Environment(\.modelContext) var modelContext
     @Binding var searchDate: Date
-    @State private var showDatePicker = false
     @Binding var sortNewestFirst: SortOrder
+
+    @Environment(\.modelContext) var modelContext
+
+    @State private var showDatePicker = false
 
     var body: some View {
         HStack {
@@ -32,7 +34,7 @@ struct JournalHistoryToolbarView: View {
             .sheet(isPresented: $showDatePicker) {
                 DatePickerSheetView(searchDate: $searchDate)
                     .presentationDetents([.fraction(0.7)])
-                    .presentationBackground(.purpleGradient)
+                    .presentationBackground(.clear)
             }
 #if DEBUG
             Button {

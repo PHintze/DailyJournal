@@ -10,19 +10,17 @@ import SwiftUI
 struct HomeView: View {
     @Environment (\.modelContext) var modelContext
     @Environment(\.scenePhase) var scene
+
     @StateObject var network = Network()
 
     var currentDate = Date().formatted(date: .abbreviated, time: .omitted)
     let defaults = UserDefaults.standard
     let dateDefaultsKey = "LastRun"
 
-    let gradient = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
-                                  startPoint: UnitPoint(x: 0.5, y: 0.5), endPoint: .bottom)
-
     var body: some View {
         NavigationStack {
             ZStack {
-                gradient
+                Background.gradient
                     .ignoresSafeArea()
                 VStack {
                     Text("Quote of the day:")

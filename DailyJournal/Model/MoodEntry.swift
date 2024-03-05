@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftData
 import SwiftUI
 
 enum Mood: String, Codable, CaseIterable, Identifiable, RawRepresentable {
@@ -32,28 +31,4 @@ enum Mood: String, Codable, CaseIterable, Identifiable, RawRepresentable {
             return ("Terrible", .red)
         }
     }
-}
-
-@Model
-class MoodEntry: Identifiable {
-    var date: Date
-    var mood: Mood
-    var id: UUID
-
-    init(date: Date, mood: Mood, id: UUID = UUID()) {
-        self.date = date
-        self.mood = mood
-        self.id = id
-    }
-}
-
-extension MoodEntry {
-    static let moodHistorySampleData: [MoodEntry] =
-    [
-        MoodEntry(date: .now, mood: .awesome),
-        MoodEntry(date: .now - 1, mood: .happy),
-        MoodEntry(date: .now - 2, mood: .okay),
-        MoodEntry(date: .now - 3, mood: .bad),
-        MoodEntry(date: .now - 4, mood: .terrible)
-    ]
 }

@@ -7,16 +7,16 @@
 
 import SwiftData
 import SwiftUI
+import LocalAuthentication
 
 struct JournalHistoryView: View {
-    @Environment (\.modelContext) var modelContext
-    @Query var journals: [Journal]
     @Binding var sortNewestFirst: SortOrder
     @Binding var searchDate: Date
     @Binding var selectedJournal: Journal
 
     @State var showJournalDetailEditView = false
-    @State var showJournalDetailView = false
+
+    @Query var journals: [Journal]
 
     init(sortNewestFirst: Binding<SortOrder>, searchDate: Binding<Date>, selectedJournal: Binding<Journal>) {
         self._sortNewestFirst = sortNewestFirst
@@ -30,13 +30,10 @@ struct JournalHistoryView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.accent]
     }
 
-    let background = LinearGradient(gradient: Gradient(colors: [.pinkGradient, .purpleGradient]),
-                                    startPoint: .top, endPoint: .bottom)
-
     var body: some View {
         NavigationStack {
             ZStack {
-                background
+                Background.gradient
                     .ignoresSafeArea()
                 VStack {
                     if journals.count == 0 {
@@ -44,17 +41,19 @@ struct JournalHistoryView: View {
                             .font(.title)
                             .foregroundStyle(.secondary)
                             .toolbar {
-                                JournalHistoryToolbarView(searchDate: $searchDate, sortNewestFirst: $sortNewestFirst)
+                                JournalHistoryToolbarView(searchDate: $searchDate,
+                                                          sortNewestFirst: $sortNewestFirst)
                             }
                     } else {
                         List {
                             ForEach(journals) { journal in
-                                JournalHistoryRow(showJournalDetailEditView: $showJournalDetailEditView,
-                                                  journal: journal, selectedJournal: $selectedJournal)
+                                JournalHistoryRow(journal: journal,
+                                                  showJournalDetailEditView: $showJournalDetailEditView,
+                                                  selectedJournal: $selectedJournal)
                             }
                             .listRowBackground(
                                 RoundedRectangle(cornerRadius: 25.0)
-                                    .fill(Color.listBlue)
+                                    .fill(.ultraThinMaterial)
                             )
                         }
                         .listRowSpacing(25)
