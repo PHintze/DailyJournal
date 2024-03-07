@@ -64,7 +64,7 @@ struct JournalHistoryRow: View {
                                 Label("Delete", systemImage: "trash")
                             }
                         } label: {
-                            Label("Edit", systemImage: "ellipsis")
+                            Label("EditJournal", systemImage: "ellipsis")
                                 .labelStyle(.iconOnly)
                         }
                     }
@@ -73,6 +73,7 @@ struct JournalHistoryRow: View {
                     JournalDetailView(journal: journal)
                 }
             }
+            .accessibilityIdentifier(journal.title)
         }
         .padding()
         .frame(maxHeight: 175)

@@ -54,6 +54,7 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                         .bold()
                 }
+                .accessibilityIdentifier("CreateJournal")
                 .frame(width: 50, height: 50)
                 .background(.indigo)
                 .clipShape(Circle())

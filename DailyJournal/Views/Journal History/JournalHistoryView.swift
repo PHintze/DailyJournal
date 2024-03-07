@@ -59,6 +59,7 @@ struct JournalHistoryView: View {
                         .listRowSpacing(25)
                         .listStyle(.plain)
                         .padding()
+                        .accessibilityIdentifier("JournalList")
 
                         .sheet(isPresented: $showJournalDetailEditView) {
                             JournalDetailEditView(journal: $selectedJournal)

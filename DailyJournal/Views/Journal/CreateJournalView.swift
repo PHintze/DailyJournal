@@ -41,6 +41,7 @@ struct CreateJournalView: View {
                         Text((journal.mood.moodDetails.name))
 
                     }
+                    .accessibilityIdentifier("MoodButton")
                     .buttonStyle(.bordered)
                     .tint(journal.mood.moodDetails.color)
                     .popover(isPresented: $showMoodView, attachmentAnchor: .point(.center)) {
@@ -61,6 +62,8 @@ struct CreateJournalView: View {
                 ZStack {
                     TextEditor(text: $journal.content)
                         .scrollContentBackground(.hidden)
+                        .accessibilityIdentifier("Content")
+                        .accessibilityHidden(false)
 
                     if $journal.wrappedValue.content.isEmpty {
                         VStack {

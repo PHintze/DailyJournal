@@ -11,7 +11,7 @@ struct SettingsView: View {
     // Save the state of the toggle on/off for daily reminder
     @AppStorage("isScheduled") var isScheduled = false
     // Save the notification time set by user for daily reminder
-    @AppStorage("notificationTimeString") var notificationTimeString = ""
+    @AppStorage("notificationTimeString") var notificationTimeString = "08:00"
 
     @Environment(\.colorScheme) var colorScheme
 
@@ -29,6 +29,7 @@ struct SettingsView: View {
                         .onChange(of: isScheduled) {
                             handleIsScheduledChange(isScheduled: isScheduled)
                         }
+                        .accessibilityIdentifier("ReminderToggle")
 
                     if isScheduled {
                         HStack {
@@ -41,6 +42,7 @@ struct SettingsView: View {
                             } label: {
                                 Text(notificationTimeString)
                             }
+                            .accessibilityIdentifier("NotificationTime")
                             .buttonStyle(.borderedProminent)
                             .buttonBorderShape(.roundedRectangle(radius: 10))
                             .popover(isPresented: $showDatePicker, attachmentAnchor: .point(.leading)) {
@@ -60,7 +62,9 @@ struct SettingsView: View {
                                 .datePickerStyle(WheelDatePickerStyle())
                                 .frame(width: 250, height: 200)
                                 .presentationCompactAdaptation(.popover)
+                                .accessibilityIdentifier("ReminderDatePicker")
                             }
+
                         }
                     }
                 }
@@ -71,6 +75,7 @@ struct SettingsView: View {
                             securityController.appLockStateChange(securityController.isAppLockEnabled)
                             print(securityController.isAppLockEnabled)
                         }
+                        .accessibilityIdentifier("AuthToggle")
                 }
             }
             .tint(.indigo)

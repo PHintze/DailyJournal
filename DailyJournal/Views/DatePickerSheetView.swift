@@ -32,6 +32,7 @@ struct DatePickerSheetView: View {
                             Button("Done") {
                                 dismiss()
                             }
+                            .accessibilityIdentifier("SetDate")
                             .bold()
                         }
                     }

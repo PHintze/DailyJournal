@@ -32,6 +32,8 @@
 		D88044642B7F4BAD004E8BE8 /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */; };
 		D88044662B7F5131004E8BE8 /* JournalHistoryToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */; };
 		D88044682B7F596B004E8BE8 /* DatePickerSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */; };
+		D891C76F2B984EAD00C66CD8 /* DailyJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D891C76E2B984EAD00C66CD8 /* DailyJournalUITests.swift */; };
+		D891C7712B984EAD00C66CD8 /* DailyJournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D891C7702B984EAD00C66CD8 /* DailyJournalUITestsLaunchTests.swift */; };
 		D8E9726B2B7682C300F38745 /* BitCollections in Frameworks */ = {isa = PBXBuildFile; productRef = D8E9726A2B7682C300F38745 /* BitCollections */; };
 		D8E9726D2B7682C300F38745 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = D8E9726C2B7682C300F38745 /* Collections */; };
 		D8E9726F2B7682C300F38745 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = D8E9726E2B7682C300F38745 /* DequeModule */; };
@@ -41,6 +43,23 @@
 		D8E972782B76A84B00F38745 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E972772B76A84B00F38745 /* MoodEntry.swift */; };
 		D8E9727B2B78CA1500F38745 /* PreviewSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E9727A2B78CA1500F38745 /* PreviewSampleData.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D891C7722B984EAD00C66CD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D805F1CC2B74BABD00C80D18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D805F1D32B74BABD00C80D18;
+			remoteInfo = DailyJournal;
+		};
+		D891C7802B9856F900C66CD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D805F1CC2B74BABD00C80D18 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D805F1D32B74BABD00C80D18;
+			remoteInfo = DailyJournal;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		D805F1D42B74BABD00C80D18 /* DailyJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +88,10 @@
 		D88044632B7F4BAD004E8BE8 /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
 		D88044652B7F5131004E8BE8 /* JournalHistoryToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalHistoryToolbarView.swift; sourceTree = "<group>"; };
 		D88044672B7F596B004E8BE8 /* DatePickerSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSheetView.swift; sourceTree = "<group>"; };
+		D891C76C2B984EAD00C66CD8 /* DailyJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D891C76E2B984EAD00C66CD8 /* DailyJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalUITests.swift; sourceTree = "<group>"; };
+		D891C7702B984EAD00C66CD8 /* DailyJournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D891C77C2B9856F900C66CD8 /* DailyJournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyJournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E972752B76900200F38745 /* MoodHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodHistoryView.swift; sourceTree = "<group>"; };
 		D8E972772B76A84B00F38745 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		D8E9727A2B78CA1500F38745 /* PreviewSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewSampleData.swift; sourceTree = "<group>"; };
@@ -87,6 +110,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D891C7692B984EAD00C66CD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D891C7792B9856F900C66CD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -94,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D805F1D62B74BABD00C80D18 /* DailyJournal */,
+				D891C76D2B984EAD00C66CD8 /* DailyJournalUITests */,
 				D805F1D52B74BABD00C80D18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				D805F1D42B74BABD00C80D18 /* DailyJournal.app */,
+				D891C76C2B984EAD00C66CD8 /* DailyJournalUITests.xctest */,
+				D891C77C2B9856F900C66CD8 /* DailyJournalTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +237,15 @@
 			path = Journal;
 			sourceTree = "<group>";
 		};
+		D891C76D2B984EAD00C66CD8 /* DailyJournalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D891C76E2B984EAD00C66CD8 /* DailyJournalUITests.swift */,
+				D891C7702B984EAD00C66CD8 /* DailyJournalUITestsLaunchTests.swift */,
+			);
+			path = DailyJournalUITests;
+			sourceTree = "<group>";
+		};
 		D8E972792B78C9F400F38745 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +282,42 @@
 			productReference = D805F1D42B74BABD00C80D18 /* DailyJournal.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D891C76B2B984EAD00C66CD8 /* DailyJournalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D891C7762B984EAD00C66CD8 /* Build configuration list for PBXNativeTarget "DailyJournalUITests" */;
+			buildPhases = (
+				D891C7682B984EAD00C66CD8 /* Sources */,
+				D891C7692B984EAD00C66CD8 /* Frameworks */,
+				D891C76A2B984EAD00C66CD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D891C7732B984EAD00C66CD8 /* PBXTargetDependency */,
+			);
+			name = DailyJournalUITests;
+			productName = DailyJournalUITests;
+			productReference = D891C76C2B984EAD00C66CD8 /* DailyJournalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		D891C77B2B9856F900C66CD8 /* DailyJournalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D891C7822B9856F900C66CD8 /* Build configuration list for PBXNativeTarget "DailyJournalTests" */;
+			buildPhases = (
+				D891C7782B9856F900C66CD8 /* Sources */,
+				D891C7792B9856F900C66CD8 /* Frameworks */,
+				D891C77A2B9856F900C66CD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D891C7812B9856F900C66CD8 /* PBXTargetDependency */,
+			);
+			name = DailyJournalTests;
+			productName = DailyJournalTests;
+			productReference = D891C77C2B9856F900C66CD8 /* DailyJournalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -240,11 +325,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					D805F1D32B74BABD00C80D18 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					D891C76B2B984EAD00C66CD8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = D805F1D32B74BABD00C80D18;
+					};
+					D891C77B2B9856F900C66CD8 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = D805F1D32B74BABD00C80D18;
 					};
 				};
 			};
@@ -265,6 +358,8 @@
 			projectRoot = "";
 			targets = (
 				D805F1D32B74BABD00C80D18 /* DailyJournal */,
+				D891C76B2B984EAD00C66CD8 /* DailyJournalUITests */,
+				D891C77B2B9856F900C66CD8 /* DailyJournalTests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,6 +371,20 @@
 			files = (
 				D805F1DF2B74BABE00C80D18 /* Preview Assets.xcassets in Resources */,
 				D805F1DC2B74BABE00C80D18 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D891C76A2B984EAD00C66CD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D891C77A2B9856F900C66CD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +445,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D891C7682B984EAD00C66CD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D891C7712B984EAD00C66CD8 /* DailyJournalUITestsLaunchTests.swift in Sources */,
+				D891C76F2B984EAD00C66CD8 /* DailyJournalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D891C7782B9856F900C66CD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D891C7732B984EAD00C66CD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D805F1D32B74BABD00C80D18 /* DailyJournal */;
+			targetProxy = D891C7722B984EAD00C66CD8 /* PBXContainerItemProxy */;
+		};
+		D891C7812B9856F900C66CD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D805F1D32B74BABD00C80D18 /* DailyJournal */;
+			targetProxy = D891C7802B9856F900C66CD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D805F1E02B74BABE00C80D18 /* Debug */ = {
@@ -520,6 +658,80 @@
 			};
 			name = Release;
 		};
+		D891C7742B984EAD00C66CD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 442TUD5P76;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyJournalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DailyJournal;
+			};
+			name = Debug;
+		};
+		D891C7752B984EAD00C66CD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 442TUD5P76;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyJournalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DailyJournal;
+			};
+			name = Release;
+		};
+		D891C7832B9856F900C66CD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 442TUD5P76;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyJournalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyJournal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyJournal";
+			};
+			name = Debug;
+		};
+		D891C7842B9856F900C66CD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 442TUD5P76;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DailyJournalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyJournal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyJournal";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -537,6 +749,24 @@
 			buildConfigurations = (
 				D805F1E32B74BABE00C80D18 /* Debug */,
 				D805F1E42B74BABE00C80D18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D891C7762B984EAD00C66CD8 /* Build configuration list for PBXNativeTarget "DailyJournalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D891C7742B984EAD00C66CD8 /* Debug */,
+				D891C7752B984EAD00C66CD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D891C7822B9856F900C66CD8 /* Build configuration list for PBXNativeTarget "DailyJournalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D891C7832B9856F900C66CD8 /* Debug */,
+				D891C7842B9856F900C66CD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

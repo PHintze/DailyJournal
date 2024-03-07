@@ -29,7 +29,7 @@ struct CreateJournalToolbarView: View {
                     }
 
                 } label: {
-                    Label("Sort", systemImage: "ellipsis.circle")
+                    Label("Edit", systemImage: "ellipsis.circle")
                         .labelStyle(.iconOnly)
                 }
 

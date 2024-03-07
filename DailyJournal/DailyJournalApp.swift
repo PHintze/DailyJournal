@@ -27,6 +27,15 @@ struct DailyJournalApp: App {
     let defaults = UserDefaults.standard
 
     init() {
+        var inMemory = false
+
+        #if DEBUG
+        if CommandLine.arguments.contains("enable-testing") {
+            inMemory = true
+            UIView.setAnimationsEnabled(false)
+        }
+        #endif
+
         do {
             let config = ModelConfiguration(for: Journal.self)
             modelContainer = try ModelContainer(for: Journal.self, configurations: config)
