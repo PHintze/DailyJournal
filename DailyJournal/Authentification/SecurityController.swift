@@ -21,8 +21,8 @@ extension SecurityController {
     func authenticate() {
         let context = LAContext()
         let reason = "Authenticate yourself to unlock Locker"
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics,
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &error) {
+            context.evaluatePolicy(.deviceOwnerAuthentication,
                                    localizedReason: reason) { success, error in
                 Task { @MainActor in
                     if success {
