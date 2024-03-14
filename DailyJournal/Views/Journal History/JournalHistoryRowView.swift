@@ -37,6 +37,7 @@ struct JournalHistoryRow: View {
                         .overlay {
                             Text(journal.mood.moodDetails.name)
                                 .foregroundStyle(journal.mood.moodDetails.color)
+                                .accessibilityLabel("Mood: \(journal.mood.moodDetails.name)")
                         }
                     }
 
@@ -47,7 +48,10 @@ struct JournalHistoryRow: View {
                                 .weight(.heavy)
                             )
                             .foregroundStyle(.accent)
+                            .accessibilityLabel("Title: \(journal.title)")
                         Text(journal.content)
+                            .accessibilityLabel("Content: \(journal.content)")
+
                     }
                     HStack {
                         Spacer()

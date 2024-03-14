@@ -42,6 +42,7 @@ struct CreateJournalView: View {
 
                     }
                     .accessibilityIdentifier("MoodButton")
+                    .accessibilityLabel("Change mood")
                     .buttonStyle(.bordered)
                     .tint(journal.mood.moodDetails.color)
                     .popover(isPresented: $showMoodView, attachmentAnchor: .point(.center)) {
@@ -59,6 +60,7 @@ struct CreateJournalView: View {
                         .system(size: 34, design: .rounded)
                         .weight(.heavy)
                     )
+                    .accessibilityLabel("Enter title")
                 ZStack {
                     TextEditor(text: $journal.content)
                         .scrollContentBackground(.hidden)
@@ -72,6 +74,7 @@ struct CreateJournalView: View {
                                     .foregroundStyle(.tertiary)
                                     .padding(.top, 8)
                                     .padding(.leading, 5)
+                                    .accessibilityLabel("Start writing")
 
                                 Spacer()
                             }

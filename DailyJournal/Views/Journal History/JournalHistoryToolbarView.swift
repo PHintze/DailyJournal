@@ -26,7 +26,7 @@ struct JournalHistoryToolbarView: View {
                     Text("Oldest to Newest").tag(SortOrder.forward)
                 }
             } label: {
-                Label("Sort", systemImage: "line.3.horizontal.decrease.circle")
+                Label("Menu", systemImage: "line.3.horizontal.decrease.circle")
                     .symbolVariant(searchDate.formatted(date: .abbreviated, time: .omitted) !=
                                    Date().formatted(date: .abbreviated, time: .omitted) ? .fill : .none)
 

@@ -45,6 +45,7 @@ struct JournalDetailView: View {
                         .system(size: 34, design: .rounded)
                         .weight(.heavy)
                     )
+                    .accessibilityLabel(journal.title)
                 Spacer()
             }
 
