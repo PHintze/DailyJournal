@@ -19,9 +19,6 @@ enum RandomQuoteAPI {
             let decoder = JSONDecoder()
             let decodedData = try decoder.decode([Quote].self, from: data)
 
-            // Prints the first quote to the console
-            print(decodedData[0])
-            print(Date().formatted(date: .omitted, time: .shortened))
             return decodedData[0]
         } catch {
             print("Error fetching data from API: \(error)")

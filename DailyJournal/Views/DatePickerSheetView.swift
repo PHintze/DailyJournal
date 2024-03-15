@@ -15,45 +15,45 @@ struct DatePickerSheetView: View {
     var body: some View {
         NavigationStack {
 
-                Form {
-                    Section {
-                        VStack {
-                            HStack {
-                                Label("Select Date", systemImage: "calendar")
-                                    .labelStyle(.titleAndIcon)
-                                    .bold()
-                                Spacer()
-                            }
-                            DatePicker("Enter date", selection: $searchDate, displayedComponents: .date)
-                                .datePickerStyle(.graphical)
-
-                            Divider()
-
-                            Button("Done") {
-                                dismiss()
-                            }
-                            .accessibilityIdentifier("SetDate")
-                            .bold()
-                        }
-                    }
-
-                    Section {
+            Form {
+                Section {
+                    VStack {
                         HStack {
-                            Spacer()
-                            Button("Cancel") {
-                                searchDate = .now
-                                dismiss()
-                            }
-                            .bold()
-                            .foregroundStyle(.indigo)
+                            Label("Select Date", systemImage: "calendar")
+                                .labelStyle(.titleAndIcon)
+                                .bold()
                             Spacer()
                         }
+                        DatePicker("Enter date", selection: $searchDate, displayedComponents: .date)
+                            .datePickerStyle(.graphical)
+
+                        Divider()
+
+                        Button("Done") {
+                            dismiss()
+                        }
+                        .accessibilityIdentifier("SetDate")
+                        .bold()
                     }
                 }
-                .tint(.indigo)
-                .listSectionSpacing(10)
-                .scrollContentBackground(.hidden)
+
+                Section {
+                    HStack {
+                        Spacer()
+                        Button("Cancel") {
+                            searchDate = .now
+                            dismiss()
+                        }
+                        .bold()
+                        .foregroundStyle(.indigo)
+                        Spacer()
+                    }
+                }
             }
+            .tint(.indigo)
+            .listSectionSpacing(10)
+            .scrollContentBackground(.hidden)
+        }
     }
 }
 

@@ -29,12 +29,12 @@ struct DailyJournalApp: App {
     init() {
         var inMemory = false
 
-        #if DEBUG
+#if DEBUG
         if CommandLine.arguments.contains("enable-testing") {
             inMemory = true
             UIView.setAnimationsEnabled(false)
         }
-        #endif
+#endif
 
         do {
             let config = ModelConfiguration(for: Journal.self)

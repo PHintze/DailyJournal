@@ -150,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				D805F1D72B74BABD00C80D18 /* DailyJournalApp.swift */,
-				D805F1D92B74BABD00C80D18 /* ContentView.swift */,
 				D8300D5F2B91B58C00FED422 /* Notification */,
 				D8300D602B91B6B100FED422 /* Authentification */,
 				D805F1E92B74C24400C80D18 /* Views */,
@@ -184,6 +183,7 @@
 		D805F1E92B74C24400C80D18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D805F1D92B74BABD00C80D18 /* ContentView.swift */,
 				D805F1EA2B74C29E00C80D18 /* HomeView.swift */,
 				D8300D642B975C3E00FED422 /* Journal */,
 				D8300D632B975C1C00FED422 /* Journal History */,

@@ -48,8 +48,8 @@ final class DailyJournalUITests: XCTestCase {
         app.buttons["CreateJournal"].tap()
         app.textFields["Title"].tap()
         app.typeText("Newly created journal")
-//        app.textFields["Content"].tap()
-//        app.typeText("This is the content")
+        //        app.textFields["Content"].tap()
+        //        app.typeText("This is the content")
         app.navigationBars.images["Edit"].tap()
         app.buttons["Custom Date"].tap()
 
@@ -96,26 +96,6 @@ final class DailyJournalUITests: XCTestCase {
         XCTAssertEqual(app.pickerWheels.element(boundBy: 0).value as? String, "10 o’clock")
         XCTAssertEqual(app.pickerWheels.element(boundBy: 1).value as? String, "30 minutes")
     }
-
-//    func testAuthentification() {
-//        app.navigationBars.buttons["Settings"].tap()
-//        app.switches["AuthToggle"].switches.firstMatch.tap()
-//        sleep(1)
-//        notify_post("com.apple.BiometricKit_Sim.fingerTouch.match")
-//        sleep(1)
-//
-//        XCTAssertTrue(app.switches["AuthToggle"].value as? String == "1")
-//        app.terminate()
-//        let homeScreen = XCUIApplication(bundleIdentifier: "com.apple.Home")
-//        homeScreen.launch()
-//        sleep(1)
-//        app.launch()
-//        app.buttons["DailyQuote"].tap()
-//        sleep(1)
-//        notify_post("com.apple.BiometricKit_Sim.fingerTouch.nomatch")
-//        app.buttons["Unlock"].tap()
-//
-//    }
 }
 
 extension XCUIElement {

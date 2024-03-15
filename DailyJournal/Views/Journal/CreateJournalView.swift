@@ -9,11 +9,7 @@ import SwiftData
 import SwiftUI
 
 struct CreateJournalView: View {
-    @Environment (\.modelContext) var modelContext
-
     @Binding var journal: Journal
-    @Binding var sortNewestFirst: SortOrder
-    @Binding var searchDate: Date
 
     @State private var showDatePicker = false
     @State private var showMoodView = false
@@ -105,7 +101,5 @@ struct CreateJournalView: View {
 }
 
 #Preview {
-    CreateJournalView(journal: .constant(Journal.sampleData[0]),
-                      sortNewestFirst: .constant(.forward),
-                      searchDate: .constant(.now))
+    CreateJournalView(journal: .constant(Journal.sampleData[0]))
 }

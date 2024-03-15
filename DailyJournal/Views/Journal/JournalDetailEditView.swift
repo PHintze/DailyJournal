@@ -85,7 +85,7 @@ struct JournalDetailEditView: View {
 
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                   JournalToolbarView(journal: $journal, showDatePicker: $showDatePicker, showMoodView: $showMoodView)
+                    JournalToolbarView(journal: $journal, showDatePicker: $showDatePicker)
                 }
             }
             .sheet(isPresented: $showDatePicker) {

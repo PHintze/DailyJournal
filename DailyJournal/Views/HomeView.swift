@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    @Environment (\.modelContext) var modelContext
-    @Environment(\.scenePhase) var scene
-
     @EnvironmentObject var quote: Quote
 
     var body: some View {

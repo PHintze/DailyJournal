@@ -24,7 +24,7 @@ struct SettingsView: View {
             List {
                 Section(header: Text("New Entry"),
                         footer: Text("Get notified to write every day at \(notificationTimeString).")) {
-                    // The toggle if the user want to use daily reminder feature
+
                     Toggle("Daily Reminder", isOn: $isScheduled)
                         .onChange(of: isScheduled) {
                             handleIsScheduledChange(isScheduled: isScheduled)
@@ -56,9 +56,7 @@ struct SettingsView: View {
                                         notificationTimeString = DateHelper.dateFormatter.string(from: $0)
                                         handleNotificationTimeChange()
                                     }
-                                    // Only use hour and minute components, since this is a daily reminder
                                 ), displayedComponents: .hourAndMinute)
-                                // Use wheel date picker style, recommended by Apple
                                 .datePickerStyle(WheelDatePickerStyle())
                                 .frame(width: 250, height: 200)
                                 .presentationCompactAdaptation(.popover)

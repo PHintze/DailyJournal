@@ -11,7 +11,6 @@ import SwiftUI
 struct MoodButtonView: View {
     @Binding var journal: Journal
 
-    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
 
     let gridButtonLayout = [GridItem(.flexible()), GridItem(.flexible())]

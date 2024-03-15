@@ -28,6 +28,7 @@ struct JournalHistoryRow: View {
                         Text("\(journal.date.formatted(.dateTime.month().year()))")
 
                         Spacer()
+
                         ZStack {
                         }
                         .frame(width: 85, height: 35)

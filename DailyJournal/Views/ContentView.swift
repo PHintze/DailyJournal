@@ -60,9 +60,7 @@ struct ContentView: View {
                 .background(.indigo)
                 .clipShape(Circle())
                 .sheet(isPresented: $showCreateJournalView) {
-                    CreateJournalView(journal: journalBinding,
-                                      sortNewestFirst: $sortNewestFirst,
-                                      searchDate: $searchDate)
+                    CreateJournalView(journal: journalBinding)
                 }
             }
             .ignoresSafeArea(.keyboard)

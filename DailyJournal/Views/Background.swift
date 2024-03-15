@@ -9,5 +9,5 @@ import SwiftUI
 
 struct Background {
     static let gradient = LinearGradient(gradient: Gradient(colors: [.darkPurpleGradient, .purpleGradient]),
-                                             startPoint: UnitPoint(x: 0.5, y: 0.5), endPoint: .bottom)
+                                         startPoint: UnitPoint(x: 0.5, y: 0.5), endPoint: .bottom)
 }

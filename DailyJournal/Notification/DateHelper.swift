@@ -8,7 +8,6 @@
 import Foundation
 
 struct DateHelper {
-    // The universally used DateFormatter
     static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "HH:mm"
